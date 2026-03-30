@@ -1,0 +1,50 @@
+/* Variáveis para facilitar a troca */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --btn-bg: #eeeeee;
+}
+
+body.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --btn-bg: #444444;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
